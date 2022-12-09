@@ -2,7 +2,7 @@
 int appWidth, appHeight, smallerDimension, largerDimension;
 //
 void setup() {
-  size(600, 400);
+  size(600, 4000);
   //fullscreen(); //displayWidth //displayHeight
   appWidth = width;
   appHeight = height;
@@ -19,6 +19,8 @@ if ( appWidth < appHeight ) { // Declaring Landscape and square
       appWidth=0;
       appHeight=0;
       println("STOP, is broken! ;(");
+    if ( appWidth==0 || appHeight==0 ) exit();
+if ( appWidth!=0 && appHeight!=0 ) println("Display: Good to Go");
     } else {
       //Empty ELSE
     }
