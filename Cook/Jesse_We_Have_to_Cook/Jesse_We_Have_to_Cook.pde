@@ -1,14 +1,14 @@
 //Global Variables
 int appWidth, appHeight, smallerDimension, largerDimension;
-Boolean OS_on=false;
+Boolean OS_on=false, splashScreenStart=false;
 /* Nigh Mode Comment
  Purple not for Night Mode, full BLUE
  resetDefaultInk is WHITE, not Night Mode Friendly, full Blue
 */
-color purple=#7D05FF, resetDefaultInk=#FFFFFF;
+color purple=#7D05FF, resetDefaultInk=#000000, white=#FFFFFF;
 //
 void setup() {
-  size(600, 4000);
+  size(1000, 800);
   //fullscreen(); //displayWidth //displayHeight
   appWidth = width;
   appHeight = height;
@@ -34,15 +34,21 @@ if ( appWidth!=0 && appHeight!=0 ) println("Display: Good to Go");
   println("Smaller Dimension is", smallerDimension, "Larger Dimension is", largerDimension);
  population();
  textSetup();
-
-}
-//
+ imagePopulation();
+}//End Setup
 void draw() {
   //Assignment 2: OS Level Mouse Click and Splash Screen
-  if ( OS_on==true ) splashScreen; //OS Level Mouse Click
+  if ( OS_on==true && splashScreenStart==false ) splashScreen(); //OS Level Mouse Click
+  if ( splashScreenStart==true ) homeScreen();
 }
 //
-void keyPressed() {}
+void keyPressed() {
+  //Splash Screen Space Bar
+  if ( OS_on==true && key==' ' ) {
+  splashScreenStart = true;
+  }//
+ //
+}
 //
 void mousePressed() {
   //OS Level Mouse Click

@@ -17,7 +17,7 @@ void spaceBarText() {
   textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
   int size = 18; //Change the number until it fits
-  textFont(Harrington, 50);
+  textFont(Harrington, size);
   text( spaceBar, startX, startY, startWidth, startHeight );
   fill(resetDefaultInk);
 }//End spaceBarText
