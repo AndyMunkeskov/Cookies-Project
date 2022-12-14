@@ -1,10 +1,7 @@
 //Global Variables
 int appWidth, appHeight, smallerDimension, largerDimension;
 Boolean OS_on=false, splashScreenStart=false;
-/* Nigh Mode Comment
- Purple not for Night Mode, full BLUE
- resetDefaultInk is WHITE, not Night Mode Friendly, full Blue
-*/
+boolean nightMode=false;
 color purple=#7D05FF, resetDefaultInk=#000000, white=#FFFFFF;
 //
 void setup() {
@@ -46,9 +43,21 @@ void keyPressed() {
   //Splash Screen Space Bar
   if ( OS_on==true && key==' ' ) {
   splashScreenStart = true;
-  }//
- //
+  BackgroundImage();
+}//
+ //Key Board Shortcuts
+ if ( key==CODED && keyCode==ESC ) exit();
+ if ( key=='Q' || key=='q') exit();
+ if ( key=='N' || key=='n') {
+   if ( nightMode==true ) { 
+   nightMode=false; 
+  } else { 
+  nightMode=true; 
+  BackgroundImage();
 }
+ }
+ //
+}//End KeyPressed
 //
 void mousePressed() {
   //OS Level Mouse Click

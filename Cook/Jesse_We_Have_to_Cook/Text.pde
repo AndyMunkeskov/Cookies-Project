@@ -11,7 +11,7 @@ void textSetup() {
   // Tools / Create Font / Find Font / Do not press "OK", known bug
 }//End Void Text Setup
 //
-void spaceBarText() {
+void spaceBarText () {
   rect( startX, startY, startWidth, startHeight );
   fill(purple); //Ink, hexidecimal copied from Color Selector
   textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
@@ -20,6 +20,17 @@ void spaceBarText() {
   textFont(Harrington, size);
   text( spaceBar, startX, startY, startWidth, startHeight );
   fill(resetDefaultInk);
-}//End spaceBarText
+};
+void quitButtonText () {
+  //rect( startX, startY, startWidth, startHeight );
+  fill(purple); //Ink, hexidecimal copied from Color Selector
+  textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+  //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
+  int size = 34; //Change the number until it fits
+  textFont(Harrington, size); 
+  String quitButton = "Quit";
+  text( quitButton, startX, startY, startWidth, startHeight );
+  noFill(); //Reset
+};
 //
 //End Text Subprogram

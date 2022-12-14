@@ -1,12 +1,24 @@
 int backgroundX, backgroundY, backgroundWidth, backgroundHeight;
-int tintDayMode=255, tintDayModeOpacity=50;
+int tintDayMode=200, tintDayModeOpacity=50;
 int tintRed=64, tintGreen=64, tintBlue=0, tintNightModeOpcacity=85; //Blue should be zero
+float rectX, rectY, rectWidth, rectHeight;
+float quitX, quitY, quitWidth, quitHeight;
 //
 void homeScreen () {
   println("You've Encountered A Wild Homescreen!"); //Testing for Splash Screen Start Button
+  //
+  //rect(quitX, quitY, quitWidth, quitHeight );
+  if ( mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) { //QuitButton Hoverover
+  //Cookie, aspect ratio
+  fill(white); 
+  rect( quitX, quitY, quitWidth, quitHeight );
+  noFill();
+} else {
+    quitButtonText();
+  }
+  quitButtonText();
   /* Home Screen Expectations
-   -Background Image using tint()
-   9 evenly spaced rectangles, Assignment #3
+  
    -Quit button and reset button (splash screen start button)
    -I each: image, text, 2d shape, button
    -Narrative through the 9 rectangles
@@ -27,7 +39,8 @@ void backgroundWhiteScreen() {
 void BackgroundImage() {
   backgroundWhiteScreen();
   //tint( tintDayMode, tintDayModeOpacity ); //Day Mode, see ternary operator
-  tint( tintRed, tintGreen, tintBlue, tintNightModeOpcacity ); //Night Mode, see ternary operator
+  if ( nightMode==false ) tint( tintRed, tintGreen, tintBlue, tintNightModeOpcacity ); //Night Mode, see ternary operator
+  if ( nightMode==true ) image( backGroundImage, backgroundX, backgroundY, backgroundWidth, backgroundHeight );
   image( backGroundImage, backgroundX, backgroundY, backgroundWidth, backgroundHeight );
 }//End BackgroundImage
 //End Home Screen Subprogram
