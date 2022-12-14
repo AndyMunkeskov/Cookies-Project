@@ -38,9 +38,8 @@ void backgroundWhiteScreen() {
 //
 void BackgroundImage() {
   backgroundWhiteScreen();
-  //tint( tintDayMode, tintDayModeOpacity ); //Day Mode, see ternary operator
-  if ( nightMode==false ) tint( tintRed, tintGreen, tintBlue, tintNightModeOpcacity ); //Night Mode, see ternary operator
-  if ( nightMode==true ) image( backGroundImage, backgroundX, backgroundY, backgroundWidth, backgroundHeight );
+  if ( nightMode==false ) tint( tintDayMode, tintDayModeOpacity ); //Day Mode, see ternary operator
+  if ( nightMode==true ) tint( tintRed, tintGreen, tintBlue, tintNightModeOpcacity ); //Night Mode, see ternary operator
   image( backGroundImage, backgroundX, backgroundY, backgroundWidth, backgroundHeight );
 }//End BackgroundImage
 //End Home Screen Subprogram

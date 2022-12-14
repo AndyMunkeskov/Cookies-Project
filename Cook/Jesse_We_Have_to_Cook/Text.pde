@@ -29,7 +29,7 @@ void quitButtonText () {
   int size = 34; //Change the number until it fits
   textFont(Harrington, size); 
   String quitButton = "Quit";
-  text( quitButton, startX, startY, startWidth, startHeight );
+  text( quitButton, quitX, quitY, quitWidth, quitHeight );
   noFill(); //Reset
 };
 //

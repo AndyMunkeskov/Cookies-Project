@@ -10,28 +10,28 @@ void setup() {
   appWidth = width;
   appHeight = height;
   println("\t\t\tWidth="+width, "\tHeight ="+height);
-println("Display monitor:", "\twidth:"+displayWidth, "\theight:"+displayHeight);
-//
-String ls="Landscape or Square", p="portrait", DO="display orientation", instruct="turn your phone or it no workie :(";
-//
-if ( appWidth < appHeight ) { // Declaring Landscape and square
-   println(instruct);
- } else {
+  println("Display monitor:", "\twidth:"+displayWidth, "\theight:"+displayHeight);
+  //
+  String ls="Landscape or Square", p="portrait", DO="display orientation", instruct="turn your phone or it no workie :(";
+  //
+  if ( appWidth < appHeight ) { // Declaring Landscape and square
+    println(instruct);
+  } else {
     println("Display: Good to Go");
     if ( appWidth > displayWidth ) { //Fitting CANVAS into Monitor Display
       appWidth=0;
       appHeight=0;
       println("STOP, is broken! ;(");
-    if ( appWidth==0 || appHeight==0 ) exit();
-if ( appWidth!=0 && appHeight!=0 ) println("Display: Good to Go");
+      if ( appWidth==0 || appHeight==0 ) exit();
+      if ( appWidth!=0 && appHeight!=0 ) println("Display: Good to Go");
     } else {
       //Empty ELSE
     }
- }
+  }
   println("Smaller Dimension is", smallerDimension, "Larger Dimension is", largerDimension);
- population();
- textSetup();
- imagePopulation();
+  population();
+  textSetup();
+  imagePopulation();
 }//End Setup
 void draw() {
   //Assignment 2: OS Level Mouse Click and Splash Screen
@@ -42,25 +42,25 @@ void draw() {
 void keyPressed() {
   //Splash Screen Space Bar
   if ( OS_on==true && key==' ' ) {
-  splashScreenStart = true;
-  BackgroundImage();
-}//
- //Key Board Shortcuts
- if ( key==CODED && keyCode==ESC ) exit();
- if ( key=='Q' || key=='q') exit();
- if ( key=='N' || key=='n') {
-   if ( nightMode==true ) { 
-   nightMode=false; 
-  } else { 
-  nightMode=true; 
-  BackgroundImage();
-}
- }
- //
+    splashScreenStart = true;
+    BackgroundImage();
+  }//
+  //Key Board Shortcuts
+  if ( key==CODED && keyCode==ESC ) exit();
+  if ( key=='Q' || key=='q') exit();
+  if ( key=='N' || key=='n') {
+    if ( nightMode==true ) { 
+      nightMode=false;
+      BackgroundImage();
+    } else { 
+      nightMode=true; 
+      BackgroundImage();
+    }
+  }
+  //
 }//End KeyPressed
 //
 void mousePressed() {
   //OS Level Mouse Click
   if ( OS_on==false ) OS_on=true;//End OS Level Mouse Click
-  
 }
