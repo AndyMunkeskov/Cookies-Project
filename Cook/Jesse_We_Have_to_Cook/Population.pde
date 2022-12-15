@@ -14,6 +14,11 @@ void population() {
   quitHeight = appHeight * 1/10 ;
   quitX = centerX - quitWidth * 1/2 ;
   quitY = centerY - 4*quitHeight;
+  //
+  quitButtonImageRectWidth = quitWidth;
+  quitButtonImageRectHeight = quitHeight; 
+  quitButtonImageRectX = quitX; //Will need to be fixed later
+  quitButtonImageRectY = quitY;
 }//End population
 //
 //End population Subprogram
