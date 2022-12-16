@@ -1,9 +1,8 @@
 PImage backGroundImage, quitButtonImage;
 //
 void imagePopulation() {
-  quitButtonImage = loadImage( "Images/Half Life 3 Confirmed.jpg");
   backGroundImage = loadImage ("Images/Tf2 Image for Website Thingy.jpg");
-  
+  quitButtonImage = loadImage( "Images/Half Life 3 Confirmed.jpg");
 }//End imagePopulation
 //
 void quitButtonImage() {
