@@ -9,7 +9,7 @@ void imageNightMode() {
   //if ( nightMode==false ) tint( tintDayMode, tintDayModeOpacity ); //Day Mode, see ternary operator
   //if ( nightMode==true ) tint( tintRed, tintGreen, tintBlue, tintNightModeOpcacity ); //Night Mode, see ternary operator
 //
-if () {
+  if ( nightMode==true ) {
    tint( tintRed, tintGreen, tintBlue, tintNightModeOpcacity );
   }else{
    tint( tintDayMode, tintDayModeOpacity );
@@ -18,7 +18,7 @@ if () {
 void quitButtonImage() {
   quitButtonImage = backGroundImage;
   rect(quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight);
-  imageNightMode()
+  imageNightMode();
   image( quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight );
   //Aspect Ratio
   float quitButtonImageWidth=460 , quitButtonImageHeight=215;
@@ -37,7 +37,7 @@ void quitButtonImage() {
       //Debugging: x-value must be centered
       float centerX=appWidth*1/2;
       quitButtonImageRectX = centerX - quitButtonImageWidthAdjusted * 1/2;
-     imageNightMode()
+     imageNightMode();
      image( quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageWidthAdjusted, quitButtonImageHeight_Calculated);
       //  
    } else { //Portrait
@@ -47,16 +47,16 @@ void quitButtonImage() {
     quitButtonImageHeight_Adjusted = quitButtonImageRectHeight; //Uses builtin compression algorithm
     imageHeightRatio = smallerDimension / largerDimension; //value<1, main point of algorithm
     quitButtonImageWidthCalculated = quitButtonImageHeight_Adjusted * imageHeightRatio;
-    //Debugging: the x-value must be centered
+  //Debugging: the x-value must be centered
     float centerX=appWidth*1/2;
     quitButtonImageRectX = centerX - quitButtonImageWidthCalculated * 1/2;
-    imageNightMode()
+    imageNightMode();
     image( quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageWidthCalculated, quitButtonImageHeight_Adjusted);
     //
   }
    //
    //No Aspect Ratio
-   imageNightMode()
+   imageNightMode();
    image( quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight);
    //
 }//End QuitButtonImage
@@ -85,5 +85,6 @@ if ( mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+
     strokeWeight(1); //Reset to 1 pixel
     noFill(); //Reset to white
     quitButtonText();
+  }
 }//End quitButtonHoverOver
 //End images Subprogram

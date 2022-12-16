@@ -32,7 +32,7 @@ void homeScreen () {
   //
   void BackgroundImage() {
    backgroundWhiteScreen();
-    imageNightMode()
+    imageNightMode();
    image( backGroundImage, backgroundX, backgroundY, backgroundWidth, backgroundHeight );
   }//End BackgroundImage
   //
