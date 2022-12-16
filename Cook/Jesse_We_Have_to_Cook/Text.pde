@@ -23,6 +23,7 @@ void spaceBarText () {
 };
 void quitButtonText () {
   //rect( startX, startY, startWidth, startHeight );
+  color ink = (nightMode==true) ? [#467D00] : purple ;
   fill(purple); //Ink, hexidecimal copied from Color Selector
   textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
