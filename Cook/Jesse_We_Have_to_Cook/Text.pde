@@ -11,16 +11,6 @@ void textSetup() {
   // Tools / Create Font / Find Font / Do not press "OK", known bug
 }//End Void Text Setup
 //
-void spaceBarText () {
-  rect( startX, startY, startWidth, startHeight );
-  fill(purple); //Ink, hexidecimal copied from Color Selector
-  textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
-  //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
-  int size = 18; //Change the number until it fits
-  textFont(Harrington, size);
-  text( spaceBar, startX, startY, startWidth, startHeight );
-  fill(resetDefaultInk);
-};
 void quitButtonText () {
   //rect( startX, startY, startWidth, startHeight );
   color ink = (nightMode==true) ? #467D00 : purple ;
@@ -32,6 +22,18 @@ void quitButtonText () {
   String quitButton = "Quit";
   text( quitButton, quitX, quitY, quitWidth, quitHeight );
   noFill(); //Reset
+
+
+};
+void spaceBarText () {
+  rect( startX, startY, startWidth, startHeight );
+  fill(purple); //Ink, hexidecimal copied from Color Selector
+  textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+  //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
+  int size = 18; //Change the number until it fits
+  textFont(Harrington, size);
+  text( spaceBar, startX, startY, startWidth, startHeight );
+  fill(resetDefaultInk);
 };
 //
 //End Text Subprogram

@@ -5,7 +5,7 @@ boolean nightMode=false;
 color purple=#7D05FF, resetDefaultInk=#000000, white=#FFFFFF;
 //
 void setup() {
-  size(1000, 800);
+  size(1920, 1080);
   //fullscreen(); //displayWidth //displayHeight
   appWidth = width;
   appHeight = height;
@@ -36,7 +36,11 @@ void setup() {
 void draw() {
   if ( OS_on==true && splashScreenStart==false ) splashScreen(); //OS Level Mouse Click
   if ( splashScreenStart==true ) homeScreen();
-rect(rectX, rectY, rectWidth, rectHeight );
+//
+  
+  fill(white);
+  rect(rectX, rectY, rectWidth, rectHeight );
+  rect(rectX, rectY, rectWidth, rectHeight );
 }
 //
 void keyPressed() {
@@ -63,6 +67,5 @@ void keyPressed() {
 void mousePressed() {
   //OS Level Mouse Click
   if ( OS_on==false ) OS_on=true;//End OS Level Mouse Click
-  //Quit Button
   if ( splashScreenStart = true && mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) exit();
 }

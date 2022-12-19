@@ -1,8 +1,8 @@
 PImage backGroundImage, quitButtonImage;
 //
 void imagePopulation() {
-  backGroundImage = loadImage ("Images/Tf2 Image for Website Thingy.jpg");
-  quitButtonImage = loadImage( "Images/Half Life 3 Confirmed.jpg");
+  backGroundImage = loadImage("../Images/Stupid Skeleton Dance.jpg");
+  quitButtonImage = loadImage( "Images/Skeleton Head.jpg");
 }//End imagePopulation
 //
 void imageNightMode() {
@@ -16,7 +16,6 @@ void imageNightMode() {
 }
 }//End Image Night Mode
 void quitButtonImage() {
-  quitButtonImage = backGroundImage;
   rect(quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight);
   imageNightMode();
   image( quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight );
