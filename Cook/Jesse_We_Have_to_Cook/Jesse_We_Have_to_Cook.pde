@@ -34,9 +34,9 @@ void setup() {
   imagePopulation();
 }//End Setup
 void draw() {
-  //Assignment 2: OS Level Mouse Click and Splash Screen
   if ( OS_on==true && splashScreenStart==false ) splashScreen(); //OS Level Mouse Click
   if ( splashScreenStart==true ) homeScreen();
+rect(rectX, rectY, rectWidth, rectHeight );
 }
 //
 void keyPressed() {

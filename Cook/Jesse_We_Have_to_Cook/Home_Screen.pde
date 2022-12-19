@@ -14,12 +14,8 @@ void homeScreen () {
   /* Home Screen Expectations
   
    -Quit button and reset button (splash screen start button)
-   -I each: image, text, 2d shape, button
-   -Narrative through the 9 rectangles
-   -See case study
-   -Note: must have on image with aspect ratio
    */
-  //
+
 
 //
   void backgroundWhiteScreen() {
