@@ -12,12 +12,12 @@ void population() {
   //
   quitWidth = appWidth * 1/3 ;
   quitHeight = appHeight * 1/10 ;
-  quitX = appWidth * 1/3 ;
-  quitY = appHeight * 1/3;
+  quitX = centerX - quitWidth * 1/2;
+  quitY = centerY - 4*quitHeight;
   //
   quitButtonImageRectWidth = quitWidth;
   quitButtonImageRectHeight = quitHeight; 
-  quitButtonImageRectX = quitX; //Will need to be fixed later
+  quitButtonImageRectX = quitX; 
   quitButtonImageRectY = quitY;
   //
   startWidth = appWidth * 1/3 ;

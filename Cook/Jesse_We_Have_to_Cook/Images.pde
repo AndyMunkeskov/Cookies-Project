@@ -1,7 +1,7 @@
 PImage backGroundImage, quitButtonImage;
 //
 void imagePopulation() {
-  backGroundImage = loadImage("../Images/Stupid Skeleton Dance.jpg");
+  backGroundImage = loadImage("Images/Stupid Skeleton Dance.jpg");
   quitButtonImage = loadImage( "Images/Skeleton Head.jpg");
 }//End imagePopulation
 //

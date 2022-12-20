@@ -3,6 +3,7 @@ int appWidth, appHeight, smallerDimension, largerDimension;
 Boolean OS_on=false, splashScreenStart=false;
 boolean nightMode=false;
 color purple=#7D05FF, resetDefaultInk=#000000, white=#FFFFFF;
+int centerX, centerY;
 //
 void setup() {
   size(1920, 1080);
@@ -37,14 +38,15 @@ void draw() {
   if ( OS_on==true && splashScreenStart==false ) splashScreen(); //OS Level Mouse Click
   if ( splashScreenStart==true ) homeScreen();
 //
-  
   fill(white);
   rect(rectX, rectY, rectWidth, rectHeight );
-  rect(rectX, rectY, rectWidth, rectHeight );
+  fill(white);
+  rect( centerX, centerY, rectWidth, rectHeight );
+  rect(appWidth * 2/3, appHeight * 2/3, rectWidth, rectHeight);
+  rect(appWidth, appHeight, rectWidth, rectHeight);
 }
 //
 void keyPressed() {
-  //Splash Screen Space Bar
   if ( OS_on==true && key==' ' ) {
     splashScreenStart = true;
     BackgroundImage();

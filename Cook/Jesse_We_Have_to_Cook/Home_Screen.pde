@@ -10,13 +10,7 @@ void homeScreen () {
   //
   //rect(quitX, quitY, quitWidth, quitHeight );
   quitButtonHoverOver();
-}  
-  /* Home Screen Expectations
-  
-   -Quit button and reset button (splash screen start button)
-   */
-
-
+}    
 //
   void backgroundWhiteScreen() {
     fill(white);
